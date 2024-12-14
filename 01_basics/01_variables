@@ -1,0 +1,14 @@
+const accountId=6524738
+let accountMail="kuldeep@git.com"
+var accountNumber="546823"
+
+//we should not use var cuz of issue in block and functional scope
+
+accountName="kuldeep"
+
+
+let accountState; //we can add semicolon or not it does not matter in javascript
+
+
+
+console.table([accountId, accountMail, accountNumber, accountState])
