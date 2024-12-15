@@ -1,0 +1,10 @@
+let num=56
+let bigNum=1234567890123456789012345678901234567890n
+let Name="kuldeep"
+let x= null
+let a;
+let boss = true
+
+
+console.log(typeof 56)  
+console.log(typeof "kuldeep")
