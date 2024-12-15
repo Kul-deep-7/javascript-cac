@@ -1,0 +1,21 @@
+let score ="33"
+console.log(typeof score)
+
+let valueInNumber= Number(score)
+console.log(typeof valueInNumber)
+
+let a= 0
+let b= 1
+
+let c=Boolean(a)
+console.log(c)
+
+/*  "33"-> String
+    33->number
+    33abc->NaN
+
+    IN BOOLEAN:
+    0=false
+    1=true
+
+*/
