@@ -111,4 +111,9 @@ let newobj=(Object.assign({},user,state)) //merge two objects
 console.log(Object.entries(state)); //return entries of object, meaans it return key value pair in array
 // console.log((user.hasOwnProperty("studiedAt"))); //return true if key is present in object
 
+let {state1, state2} = state; //destructuring
+// console.log(state1);  //this is easy way to get value of key from object
+
+let {state1 : s1, state2 : s2} = state; //we can also rename key while destructuring
+console.log(s2); 
 
