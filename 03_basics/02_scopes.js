@@ -4,7 +4,7 @@
 
                             Global Scope – Accessible anywhere in the program  
                             Local Scope – Only accessible inside a function or block  
-                        {} - a block of code enclosed in curly braces.
+                        {} - a block of code enclosed in curly braces also called block scope (let n const are block scoped, var is function scoped).
                             */
                             
 
