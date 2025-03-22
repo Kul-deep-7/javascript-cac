@@ -5,6 +5,10 @@
                             Global Scope – Accessible anywhere in the program  
                             Local Scope – Only accessible inside a function or block  
                         {} - a block of code enclosed in curly braces also called block scope (let n const are block scoped, var is function scoped).
+                        Lexcial Scope - A function can access variables from its parent function or global scope. This is called lexical scoping.
+                                            If a function is written inside another function, it can access variables from outer scopes 
+                                            (including global scope), but outer functions can't access the inner variables.
+                           
                             */
                             
 
