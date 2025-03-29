@@ -72,6 +72,7 @@ const map = new Map()
 map.set(1,"kuldeep")
 map.set("kuldeep", 7)
 
+//using for of loop for maps
 for (const [key, value] of map) {
     console.log(key, '=>' , value);
     
