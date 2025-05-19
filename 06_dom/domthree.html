@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style ="background-color: black; color: white;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Mon</div>
+        <div class="day">Tues</div>
+        <div class="day">Wed</div>
+        <div class="day">Thurs</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')    
+    console.log(parent.children) // HTMLCollection(4) [div.Mon, div.Tues, div.Wed, div.Thurs] !!WE CAN USE LOOP
+    console.log(parent.children[2])// div.Wed
+    console.log(parent.children[2].innerHTML) // Wed
+
+    for (let index = 0; index < parent.children.length; index++) {
+        const element = parent.children[index]; 
+        console.log(element.innerHTML) // Mon, Tues, Wed, Thurs
+    }
+
+    parent.children[2].style.color = "red" // Wed is red now
+
+    console.log(parent.firstElementChild) // gives the first child element which is div.Mon
+    console.log(parent.lastElementChild) // gives the last child element which is div.Thurs
+
+    const dayOne = document.querySelector('.day') 
+    console.log(dayOne) // div.Mon
+    console.log(dayOne.parentElement) // gives the parent element which is div.parent
+    console.log(dayOne.nextElementSibling) // gives the next sibling element which is div.Tues
+    
+    console.log("NODES :", parent.childNodes) // NodeList[11] [text, comment, text, div.day, text, div.day, text, div.day, text, div.day, text]
+                                          //it counts ' ' (space) as a node (text) too
+    
+    </script>
+</html>

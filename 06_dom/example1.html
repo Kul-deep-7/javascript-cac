@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile Cards</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <h1>Our Users</h1>
+  
+
+  <script>
+    // const div = document.createElement('div')
+    // div.className = "card"
+    // div.textContent = "name: Aryan , age: 21, city: Delhi"
+    // div.style.backgroundColor = "red"
+    // document.body.appendChild(div)
+    
+    //or
+
+    
+    const red = function (card){
+      const div = document.createElement('div')
+      div.textContent = `${card}`
+      div.style.backgroundColor = "red"
+      div.style.padding = "10px"
+      div.style.width = "200px"
+      div.style.borderradius = "10px"
+      div.style.border = "1px solid #ccc"
+      div.style.margin = "10px"
+      document.body.appendChild(div)
+    }
+
+    red("name: Aryan , age: 21, city: Delhi")
+    red("name : Nikita, age:17, city: Merta")
+    
+  </script>
+</body>
+</html>
