@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    const river = document.querySelector("#river")
+    river.addEventListener("click" , (event) => {
+        console.log("You hovered over the river image")
+        
+    },false)
+
+
+    //THIS IS AN EVENT USED TO REMOVE AN IMAGE FROM THE LIST
+
+     const images = document.querySelector("#images")
+    // images.addEventListener("click", (event) => {
+    //     if(event.target.tagName === "IMG" || "A"){
+    //         let removeIt = event.target.parentNode
+    //         removeIt.remove()
+    //     }
+    // },false)
+
+    //TIMESTAMP EVENT - Times (in milliseconds) when the event was created
+    river.addEventListener("click", (event) => {
+        console.log(event.timeStamp)
+    },false)
+
+    /*EVENT PROPAGATION - the 3rd parameter of the addEventListener method
+    can be set to true or false. If set to true, the event will be captured during the capturing phase,
+    if set to false, the event will be captured during the bubbling phase. 
+    The default value is false.
+    Bubbling phase- the event starts from the target element and bubbles up to the root element.
+    Capturing phase- the event starts from the root element and goes down to the target element.
+    */
+
+
+    const owl = document.querySelector("#owl")
+    owl.addEventListener("click" , (event) => {
+        console.log("You hovered over the owl image")
+        //event.stopPropagation() // This stops the event from bubbling up to the parent elements
+    },false) 
+
+    images.addEventListener("click", (event) => {
+        console.log("Clicked on an image or link")
+    },true) //using true will show "Clicked on an image or link" first before the owl event
+    
+    //stopPropagation() - is used to prevent an event from bubbling up (or propagating) to parent elements in the DOM.
+    //event.stopPropagation() does NOT stop the event from reaching the target.
+
+    document.querySelector("#google").addEventListener("click", function(event){
+        event.preventDefault(); // This prevents the default action of the link (navigating to google.com)
+        console.log("Google link clicked, but navigation prevented.");
+    })
+
+</script>
+</html>
+
