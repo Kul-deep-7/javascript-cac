@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+</head>
+<body>
+    <h1>Hello Mahendra</h1>
+    <button id="stop">stop</button>
+    <button id="start">start</button>
+
+</body>
+<script>
+    const head =document.querySelector("h1");
+    const start =document.querySelector("#start");
+    const stopB = document.querySelector("#stop")
+
+    let changeName;
+
+    start.addEventListener("click", (event)=>{
+        changeName=setTimeout(()=>{
+        head.innerHTML = "Hello Kuldeep"
+        document.body.style.backgroundColor ="pink";
+    },300)
+    })
+
+    stopB.addEventListener("click", (event)=>{
+        clearTimeout(changeName); // This will stop the setTimeout function from executing
+        // MANDATORY in setInterval or the code will run after the specified time
+        head.innerHTML = "Hello Mahendra";
+        document.body.style.backgroundColor = "white";
+    })
+
+</script>
+</html>
+
+//setTimeout is used to execute a function after a specified time in milliseconds (only 1 time)
+//setInterval is used to execute a function repeatedly after a specified time in milliseconds 
+//clearTimeout is used to stop the setTimeout function from executing
+//clearInterval is used to stop the setInterval function from executing 
+
